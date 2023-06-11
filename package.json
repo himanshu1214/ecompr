@@ -1,0 +1,22 @@
+{
+  "name": "ecom-shop",
+  "version": "1.0.0",
+  "description": "Ecom shopping app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshu1214/ecompr.git"
+  },
+  "author": "Himanshu Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/himanshu1214/ecompr/issues"
+  },
+  "homepage": "https://github.com/himanshu1214/ecompr#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
