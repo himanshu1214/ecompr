@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
 import { apiSlice } from "./slices/apiSlice"
 
 const store = configureStore({
@@ -11,5 +12,7 @@ const store = configureStore({
     devTools: true,
 
 });
+
+setupListeners(store.dispatch)
 
 export default store;
