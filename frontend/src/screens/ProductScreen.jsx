@@ -3,6 +3,8 @@ import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from 'react-b
 import Rating from '../components/Rating';
 import { useGetProductsByIdQuery } from '../slices/productApiSlice';
 import { useParams, id } from 'react-router-dom';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 const ProductScreen = () => {
 
@@ -14,8 +16,8 @@ const ProductScreen = () => {
     <Link className='btn btn-light' to='/'> Go Back </Link> 
 
     {isLoading ? ( 
-    <h2>Loading....</h2>) : error ? (
-        <div>{error?.product?.message || error.error}</div>
+    <Loader/>) : error ? (
+        <Message>{error?.product?.message || error.error}</Message>
     ): (
       <Row>
       <Col md={6}> 
